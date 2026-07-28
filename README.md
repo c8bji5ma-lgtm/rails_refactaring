@@ -35,10 +35,42 @@ The main functions are as follows.
 
 ## 環境構築 / Installation
 
+### 動作環境
+
+- Ruby 4.0.5
+- Ruby on Rails 8.1.3
+- Bundler 4.0.16
+- PostgreSQL 18.4
+- Node.js 24.18.0
+- Yarn 1.22.22
+
+### セットアップ
+
+```sh
+git clone git@github.com:diveintocode-corp/rails_refactoring_task.git
+cd rails_refactoring_task
+bundle install
+yarn install --frozen-lockfile
+bundle exec rails db:prepare
+bundle exec rails server
 ```
-$ git clone git@github.com:kfukai23/football_info_for_refactoring.git
-$ cd football_info_for_refactoring
-$ bundle install
-$ rails db:setup
-$ rails s
+
+`bin/setup`を使う場合は、依存関係の導入とデータベース準備をまとめて実行できます。
+
+```sh
+bin/setup
+```
+
+### テスト
+
+```sh
+bundle exec rspec
+```
+
+### 環境変数
+
+ローカル開発では、通常は環境変数の設定は不要です。PostgreSQLの接続先を変更する場合は`DATABASE_URL`を指定してください。本番環境では`RAILS_REFACTORING_TASK_DATABASE_PASSWORD`または`DATABASE_URL`を設定し、暗号化credentialsを使用する場合は`RAILS_MASTER_KEY`も設定してください。
+
+```sh
+DATABASE_URL=postgresql://user:password@localhost/rails_refactoring_task_development bundle exec rails server
 ```
