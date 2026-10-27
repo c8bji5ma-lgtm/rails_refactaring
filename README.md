@@ -37,7 +37,7 @@ The main functions are as follows.
 
 ### 動作環境
 
-- Ruby 4.0.5
+- Ruby 4.0.6
 - Ruby on Rails 8.1.3
 - Bundler 4.0.16
 - PostgreSQL 18.4

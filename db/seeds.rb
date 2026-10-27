@@ -247,7 +247,7 @@ matches_in_england = [
   { kicked_off_at: Time.zone.local(Date.current.year - 1, 9, 4, 14, 00), league: League.find_by!(name: 'Primal League'), home_team: Club.find_by!(name: 'Manchester Town FC'), away_team: Club.find_by!(name: 'Leon FC'), home_team_score: 1, away_team_score: 2 },
 ]
 
-Time.zone = 'Japan'
+Time.zone = 'Asia/Tokyo'
 matches_in_japan = [
   { kicked_off_at: Time.zone.local(Date.current.year - 1, 8, 1, 12, 30), league: League.find_by!(name: 'Japan League'), home_team: Club.find_by!(name: 'Yokohama Bayside FC'), away_team: Club.find_by!(name: 'Tokyo City FC'), home_team_score: 3, away_team_score: 1 },
   { kicked_off_at: Time.zone.local(Date.current.year - 1, 8, 1, 14, 00), league: League.find_by!(name: 'Japan League'), home_team: Club.find_by!(name: 'FC Nagano'), away_team: Club.find_by!(name: 'Saitama FC'), home_team_score: 1, away_team_score: 2 },

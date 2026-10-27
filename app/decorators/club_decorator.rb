@@ -1,4 +1,8 @@
 module ClubDecorator
+  def homebase
+    "#{hometown}, #{country}"
+  end
+
   def total_result_on(year=nil)
     year = Date.current.year unless year
 
